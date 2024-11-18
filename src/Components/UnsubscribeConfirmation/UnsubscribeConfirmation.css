@@ -1,0 +1,61 @@
+/* UnsubscribeConfirmation.css */
+
+.confirmation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    width: 80%; /* Adjust the width */
+    max-width: 600px; /* Limit the max width */
+    padding: 40px;
+    margin: auto;
+    background-color: white; /* Set background to white for the pop-up */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1); /* Add shadow for the pop-up */
+    border-radius: 20px; /* Round the corners */
+    text-align: center;
+    z-index: 10; /* Ensure it’s above other elements */
+  }
+  
+  .confirmation-container h1,
+  .confirmation-container p,
+  .confirmation-container a {
+    background-color: transparent; /* Explicitly set background to transparent */
+  }
+  
+  .confirmation-container h1 {
+    color: #FA7930; /* Use the same color as 'Nomi' */
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .confirmation-container p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .confirmation-container .btn {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #FA7930;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .confirmation-container .btn:hover {
+    background-color: #ff527b;
+  }
+  
+  .page-background {
+    background-color: #fbefde; /* Match with the header background */
+    height: 100vh; /* Full height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  

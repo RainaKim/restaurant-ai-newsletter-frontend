@@ -1,7 +1,6 @@
-.hero{
+.hero {
     width: 100%;
     min-height: 100vh;
-    /* background: linear-gradient(rgba(8,0,58,0.7),rgba(8,0,58,0.7)), url('../../assets/hero.png'); */
     background: #fbefde;
     background-size: cover;
     background-position: center;
@@ -9,83 +8,170 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.hero-text{
+    flex-direction: column;
+    padding-top: 60px;
+    padding: 20px; /* Ensure padding does not cause overflow */
+    box-sizing: border-box;
+  }
+  
+  .hero-text {
     text-align: center;
-    max-width: 500px;
-
-}
-.hero-text h1{
-    font-size: 40px;
-    font-weight: 600;
-}
-.nomi{
+    max-width: 900px;
+    width: 100%;
+  }
+  
+  .hero-text h1 {
+    font-size: 80px;
+    font-weight: 620;
+  }
+  
+  .nomi {
     color: #FA7930;
     display: inline;
-}
-.hero-text p{
-    font-size: 16px;
-    margin: 10px auto 20px;
+  }
+
+  .submitted-email {
+    color: #FA7930;
+    display: inline;
+    background: white;
+  }
+  
+  .hero-text p {
+    font-size: 35px;
+    margin: 20px auto 40px;
     line-height: 1.4;
     font-weight: 330;
-}
-.feedback-card {
-    width: 504px;
-    height: 520px;
-    padding: 48px 64px;
+  }
+  
+  .feedback-card {
+    width: 80%;
+    max-width: 504px;
+    padding: 24px 32px;
     border-radius: 36px;
-}
-.feedback-card img {
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  
+  .feedback-card img {
     width: 64px;
-    margin-bottom: 40px;
-}
-.feedback-card p {
-      margin-top: 24px;
-      margin-bottom: 40px;
-      font-size: 11px;
-      line-height: 16px;
-}
-.feedback-card span {
-    font-weight: 700;
-}
-.button {
-    height: 56px;
-    width: 100%;
-    border-radius: 8px;
+    margin-bottom: 10px;
+    background: white; /* Ensure white background for the icon */
+    padding: 5px; /* Add padding to avoid background bleed */
+    border-radius: 50%; /* Make sure the icon is rounded */
+  }
+  
+  .feedback-card h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    background: white;
+  }
+  
+  .feedback-card p {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 10px;
+    background: white;
+  }
+  
+  .feedback-card button {
+    height: 50px;
+    width: 150px;
+    border-radius: 10px;
     border: none;
-    font-family: "Roboto", sans-serif;;
-    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
     font-weight: 700;
     color: white;
-    background: #242742;
+    background: #fa7930;
     transition: 200ms ease;
     cursor: pointer;
-}
-
-/* media query */
-@media (max-width: 850px){
-    .hero-text h1{
-        font-size: 40px;
-    }
-}
-@media (max-width: 650px){
-    .hero-text h1{
-        font-size: 30px;
-        max-width: 400px;
-        margin: auto;
-    }
-    .hero-text p{
-        font-size: 14px;
-        margin: 15px auto 30px;
-    }
-}
-@media (max-width: 500px) {
-    .feedback-card {
-      max-width: 500px;
-      width: 100%;
-      height: 100vh;
-      padding: 0 24px;
-      padding-top: 149px;
-      border-radius: 0;
+    margin-top: 10px;
+  }
+  
+  .feedback-card button:hover {
+    background-image: linear-gradient(204.47deg, #ff6a3a, #ff527b);
+    border: none;
+    box-shadow: 0px 16px 32px rgba(255, 97, 85, 0.5);
+  }
+  
+  @media (max-width: 850px) {
+    .hero-text h1 {
+      font-size: 40px;
     }
   }
+  
+  @media (max-width: 650px) {
+    .hero-text h1 {
+      font-size: 40px;
+      max-width: 450px;
+      margin: auto;
+    }
+  
+    .hero-text p {
+      font-size: 18px;
+      margin: 15px auto 30px;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .hero {
+        padding-top: 20px; /* Reduced top padding */
+        padding-bottom: 20px; /* Added bottom padding */
+    }
+
+    .feedback-card {
+        max-width: 90%;
+        width: 100%;
+        height: 400px; /* Fixed height */
+        padding: 16px; /* Further reduced padding */
+        border-radius: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .feedback-card img {
+        width: 48px; /* Smaller icon */
+        margin-bottom: 5px;
+    }
+
+    .feedback-card h2 {
+    font-size: 20px; /* Smaller font size */
+    margin-bottom: 5px;
+    }
+
+    .feedback-card p {
+    font-size: 14px; /* Smaller font size */
+    line-height: 20px;
+    margin-bottom: 10px;
+    }
+
+    .feedback-card button {
+    height: 40px; /* Smaller button */
+    width: 120px; /* Smaller width */
+    font-size: 16px; /* Smaller font size */
+    margin-top: 5px; /* Reduced margin */
+    }
+  
+    .hero-text {
+      max-width: 90%;
+    }
+  
+    .hero-text h1 {
+      font-size: 40px;
+    }
+  
+    .hero-text p {
+        font-size: 18px; /* Adjust font size for smaller screens */
+        margin: 15px 15px 30px;
+    }
+  }
+  

@@ -10,14 +10,21 @@ nav{
     align-items: center;
     justify-content: space-between;
     z-index: 10;
+    transition: background-color 0.5s;
 }
 .nav-bar{
-    margin-right: 4 0px;
+    margin-right: 40px;
+}
+.navbar.scrolled {
+    background-color: #f6d2aa;
 }
 .logo{
-    width: 90px;
-    margin-left: 40px;
-    
+    width: 150px;
+    margin-left: 20px;
+    transition: background-color 0.5s;
+}
+.logo-dark {
+    background-color: #f6d2aa; /* Match with dark-nav background color */
 }
 nav ul li{
     display: inline-flex;
@@ -44,31 +51,18 @@ nav ul li{
 @media (max-width: 840px){
     nav{
         padding: 15px 0;
+        flex-direction: column; /* Stack items vertically */
+        justify-content: center; /* Center items horizontally */
     }
-    nav ul{
-        position: fixed;
-        top: 0;
-        right: -200px;
-        bottom: 0;
-        background: #f5c38b;
-        z-index: -1;
-        width: 160px;
-        padding-top: 70px;
-        transition: 0.5s;
-    }
-    nav ul li{
-        display: block;
-        margin: 20px 30px;
-    }
-    .menu-icon{
-        display: block;
-        width: 30px;
-        cursor: pointer;
-    }
-    .hide-mobile-menu{
-        right: 0px;
+    .logo {
+        width: 70px; /* Adjusted width */
+        margin-left: 0; /* Center the logo */
     }
     .nav-bar{
-        margin-right: 0px;
+        display: none;
+    }
+    .navbar.scrolled .logo {
+        background-color: #f6d2aa;
+        transition: background-color 0.5s;
     }
 }
